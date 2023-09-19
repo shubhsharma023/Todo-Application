@@ -1,2 +1,2 @@
-# Todo-Applicaton
+# Todo-Application
 Full Stack Application
