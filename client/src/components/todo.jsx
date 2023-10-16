@@ -13,7 +13,7 @@ function Todo() {
   }, []);
 
   async function Load() {
-    const result = await axios.get('http://localhost:27017/all');
+    const result = await axios.get('https://todo-app-server-bs0f.onrender.com/all');
     setTotal(result.data);
     console.log(result.data);
   }
@@ -21,7 +21,7 @@ function Todo() {
   async function save(event) {
     event.preventDefault();
     try {
-      await axios.post('http://localhost:27017/add', {
+      await axios.post('https://todo-app-server-bs0f.onrender.com/add', {
         // studentname: studentname,
         id: id,
         title: title,
@@ -46,7 +46,7 @@ function Todo() {
   }
 
   async function DeleteTodo(id) {
-    await axios.delete('http://localhost:27017/delete/' + id);
+    await axios.delete('https://todo-app-server-bs0f.onrender.com/delete/' + id);
     alert('Student deleted Successfully');
     Load();
   }
@@ -55,7 +55,7 @@ function Todo() {
     event.preventDefault();
 
     try {
-      await axios.put('http://localhost:27017/update/' + id, {
+      await axios.put('https://todo-app-server-bs0f.onrender.com/update/' + id, {
         // studentname: studentname,
         id: id,
         title: title,
